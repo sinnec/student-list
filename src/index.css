@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&display=swap');
+
+html {
+  height: 100%;
+  --light_grey: rgb(231, 231, 231);
+}
+
+body {
+  background-color: var(--light_grey);
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  font-weight: 300;
+  width: 800px;
+  height: 550px;
+  box-shadow: 5px 5px 5px #DCDCDC;
+  }
+
+.search {
+  display: flex;
+  padding: 15px;
+}
+
+.search > input {
+  flex: 0 0 100%;
+  padding-bottom: 10px;
+}
+
+input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: black;
+  border-style: none;
+  border-bottom: solid 1px var(--light_grey);
+}
+
+input:focus {
+  outline: none;
+  border-bottom: solid 1px black;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  -ms-overflow-style: none;   /*IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar { /*Chrome, Opera, Safari*/
+  display: none;
+}
+
+.student-list-element {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type: none;
+  border-bottom: solid 1px rgb(0,0,0,0.1);
+  padding: 10px;
+}
+
+.photo-container {
+  grid-column: 1 / 2;
+  display: block;
+  padding-top: 10px;
+}
+
+img {
+  border-radius: 60px;
+  border: solid 2px var(--light_grey);
+  align-self: start;
+  width: 100%;
+}
+
+.student-container {
+  grid-column: 2 / span 5;
+  padding-left: 40px;
+}
+
+.student-name {
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.student-details {
+  padding: 10px 20px 20px;
+}
+
+.grades-list {
+  padding-top: 20px;
+}
+
+.grades-list:empty, .tag-list:empty {
+  display: none;
+}
+
+.grade-percentage {
+  margin-left: 30px;
+}
+
+.tag-list {
+  display: flex;
+  margin: 5px 0;
+}
+
+.tag-list-element {
+  background-color: var(--light_grey);
+  padding: 10px 8px;
+  margin: 5px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.tag-input > input {
+  font-size: 0.8em;
+  width: 30%;
+  padding: 10px 5px 5px;
+}
+
+.button-container {
+  grid-column: 7 / 8;
+  display: flex;
+  align-self: start;
+  margin-left: auto;
+}
+
+.expand-button {
+  padding-top: 20px;
+  line-height:0;
+  background-color: inherit;
+  color: rgb(170, 170, 170);
+  border-style: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
+}
+
+.expand-button:hover {
+  cursor: pointer;
+  color: black;
+}
